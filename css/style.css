@@ -1,0 +1,120 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body { 
+   font-family: 'Montserrat', sans-serif;
+   font-size: 15px;
+   line-height: 1.6;
+   color: #333;
+   
+}
+
+.container{
+    position: relative;
+    overflow-y: hidden;
+}
+
+.sendButton img{
+width: 50px;
+height: 50px;
+border-radius: 10px;
+}
+
+.sendButton a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Button Highlited */
+
+.sendButton:hover {
+    background-color: black;
+    color: white;
+}
+.textBox{
+    display: flex;
+    align-items:left;
+}
+
+.btn-menu{
+    color: #fff;
+    background-color:#333;
+    padding: 7px;
+    position: fixed;
+    top: 1%;
+    right: 2%;
+    cursor: pointer;
+    transition: right .23s;
+    width: 30px;
+    height: 20px;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.btn-menu span{
+    display: block;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0 0;
+    transition: all .1s linear .23s;
+    position: relative;
+}
+.hidden-menu{
+    display:flex;
+    align-items:center; 
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    list-style: none;
+    padding: 0 5px;
+    margin: 0;
+    box-sizing: border-box;
+    width: 20%;
+    background-color:gray;
+    height: 100%;
+    top: 0;
+    right: -20%;
+    transition: right .2s;
+    z-index: 200;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    align-items:center;
+}
+.hidden-menu li{
+     margin-bottom: 20px;
+    padding: 10px 0;
+}
+.hidden-menu li a{
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+}
+.hidden-menu-ticker{
+    display: none;
+}
+.btn-menu span.first{
+    margin-top: 0; /* !! sticks on button*/
+}
+.hidden-menu-ticker:checked~.btn-menu{
+    right: 20%;
+}
+.hidden-menu-ticker:checked~.hidden-menu{
+    right: 0;
+}
+.hidden-menu-ticker:checked~.btn-menu span.first{
+    transform: rotate(45deg);
+    top:8px;
+}
+.hidden-menu-ticker:checked~.btn-menu span.second{
+   opacity: 0;
+}
+.hidden-menu-ticker:checked~.btn-menu span.third{
+   transform: rotate(-45deg);
+   top: -8px;
+ }
+ .hidden-menu li a:hover{
+     text-decoration: underline;
+ }
