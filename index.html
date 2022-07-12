@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pages</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="js/main.js">
+    <script src="js/sendAndGet.js"></script>
 </head>
 <body>
   
@@ -20,23 +20,40 @@
            <span class="first"></span>
        </label>
        
-       <u1 class="hidden-menu">
+  
+            <u1 class="hidden-menu">
            <li><a href="1">1</a></li>
            <li><a href="2">1</a></li>
            <li><a href="3">1</a></li>
            <li><a href="4">1</a></li>
            <li><a href="5">1</a></li>
            <li><a href="6">1</a></li>
-       </u1>
-        <div class textBox>
-            <p>Комментарий<Br>
+            </u1>
+
+           
+
+         <div class textBox>
+            <p>Ваше сообщение<Br>
                 <textarea name="comment" cols="40" rows="3"></textarea></p>
+               
                 <button class sendButton>
-                 
+                    <div class="container-inner__item__send">
+                   
+                        <img src="img/send.png" alt="icon: send"/>  
+                    </div>
                 </button>
               
+         </div>
+            <div class pinSomething>
+                <button class pinButton>
+                    <div class="container-inner__item__pin">
+                        
+                    <input type="file" name="photo" multiple accept="image/*,image/jpeg">
+                           
+                        <img src="img/clip.png" alt="icon: pin"/>  
+                    </div>
+                </button>
             </div>
-    </div>
-
+     </div> 
 </body>
 </html>
